@@ -1,0 +1,1 @@
+<?php	session_start();		if($_SESSION["loggedin"] == 1){		$_SESSION["loggedin"] = 0;		session_destroy();		}	include "models/viewModel.php";	include "models/protector.php";	$view = new viewModel();		$view->getView("views/header.php");	$view->getView("views/login.php");	$view->getView("views/footer.php");?>
